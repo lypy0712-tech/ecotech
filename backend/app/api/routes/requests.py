@@ -1,13 +1,13 @@
 from fastapi import APIRouter
-from backend.app.schemas.requests import RequestCreateSchema, RequestResponseSchema
+from app.schemas.requests import RequestCreateSchema, RequestResponseSchema
 
-router = APIRouter(prefix="requests", tags=["Requests"])
+router = APIRouter(prefix="/requests", tags=["Requests"])
 
 @router.get("")
 async def get_all_requests():
-    pass
+    return {"message":"Get Done"}
 
 
 @router.post("/add")
 async def add_request(payload: RequestCreateSchema) -> RequestResponseSchema:
-    return RequestResponseSchema
+    return {"message":"Post Done"}

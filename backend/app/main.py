@@ -1,6 +1,6 @@
-from fastapi import FastAPI, APIRouter
+from fastapi import FastAPI
 
-from api.router import api_router as router
+from app.api.router import api_router as router
 
 app = FastAPI(title="Ecotech Services")
 
